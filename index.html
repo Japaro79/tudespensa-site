@@ -3,24 +3,172 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>TuDespensa</title>
-    <meta name="description" content="La despensa y la lista de la compra de tu casa, compartidas entre todos los móviles." />
-    <link rel="icon" href="favicon.png" />
+    <title>TuDespensa · La despensa y la compra de tu casa</title>
+    <meta
+      name="description"
+      content="Escaneas lo que gastas y la lista de la compra se hace sola, compartida con toda la casa."
+    />
+    <meta property="og:title" content="TuDespensa" />
+    <meta
+      property="og:description"
+      content="La despensa y la lista de la compra de tu casa, compartidas entre todos los móviles."
+    />
+    <meta property="og:image" content="https://tudespensa.es/icon.png" />
+    <meta name="theme-color" content="#3B6D11" />
+    <link rel="icon" href="logo.svg" type="image/svg+xml" />
+    <link rel="icon" href="favicon.png" sizes="48x48" />
     <link rel="stylesheet" href="style.css" />
+    <script>
+      document.documentElement.classList.add('js');
+    </script>
   </head>
   <body>
-    <main class="home">
-      <img src="icon.png" alt="Icono de TuDespensa" width="96" height="96" class="logo" />
-      <h1>TuDespensa</h1>
-      <p class="lead">
-        La despensa y la lista de la compra de tu casa, compartidas entre todos los móviles.
-      </p>
-      <ul>
-        <li>Escanea un producto al gastarlo y el stock se actualiza en todos los móviles.</li>
-        <li>Lo que se acaba pasa solo a la lista de la compra, ordenada por supermercado.</li>
-        <li>Avisos de alérgenos según las intolerancias de tu casa.</li>
-      </ul>
-      <p class="muted"><a href="privacidad.html">Política de privacidad</a></p>
+    <header class="nav">
+      <a class="brand" href="./" aria-label="TuDespensa, inicio">
+        <img src="logo.svg" alt="" width="36" height="36" />
+        <span class="wordmark"><span class="light">Tu</span>Despensa</span>
+      </a>
+      <a class="nav-link" href="privacidad.html">Privacidad</a>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy reveal">
+          <h1>Tu despensa, siempre al día.</h1>
+          <p class="lead">
+            Escaneas lo que gastas y la lista de la compra se hace sola, compartida con toda la casa.
+          </p>
+          <p class="badge">Próximamente en Android</p>
+        </div>
+        <figure class="phone phone-hero reveal">
+          <picture>
+            <source srcset="img/despensa-oscuro.webp" media="(prefers-color-scheme: dark)" />
+            <img
+              src="img/despensa.webp"
+              width="600"
+              height="1147"
+              alt="Despensa de una casa con los productos agrupados por familia y su stock"
+              fetchpriority="high"
+            />
+          </picture>
+        </figure>
+      </section>
+
+      <section class="how">
+        <figure class="phone phone-tilt reveal">
+          <img
+            src="img/compra.webp"
+            width="600"
+            height="1147"
+            alt="Lista de la compra separada por supermercado, con un aviso de alérgeno en la leche"
+            loading="lazy"
+          />
+        </figure>
+        <div class="how-copy">
+          <h2 class="reveal">Tres gestos y te olvidas</h2>
+          <ol class="steps">
+            <li class="reveal">
+              <h3>Escanea al gastar</h3>
+              <p>Al abrir el último paquete, apunta la cámara al código de barras. El stock baja solo.</p>
+            </li>
+            <li class="reveal">
+              <h3>Se apunta solo</h3>
+              <p>Cuando algo baja de su mínimo, pasa a la lista de la compra de toda la casa.</p>
+            </li>
+            <li class="reveal">
+              <h3>Compra por súper</h3>
+              <p>La lista se ordena por supermercado y por pasillo. Escanea al meter en el carro.</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="features" aria-labelledby="features-title">
+        <h2 id="features-title" class="reveal">Hecha para una casa de verdad</h2>
+        <div class="bento">
+          <article class="tile tile-green reveal">
+            <img class="tile-mark" src="logo.svg" alt="" width="120" height="120" />
+            <h3>Toda la casa, al día</h3>
+            <p>
+              Cada móvil entra en la misma casa con un código. Lo que uno gasta, los demás lo ven al
+              momento.
+            </p>
+          </article>
+          <article class="tile tile-image reveal">
+            <div>
+              <h3>Avisos de alérgenos</h3>
+              <p>Marca lo que nadie puede tomar y te avisa al escanear un producto que lo lleve.</p>
+            </div>
+            <img
+              src="img/intolerancias.webp"
+              width="600"
+              height="467"
+              alt="Intolerancias de la casa, con leche y lactosa marcadas"
+              loading="lazy"
+            />
+          </article>
+          <article class="tile tile-image tile-wide reveal">
+            <div>
+              <h3>Tus supermercados</h3>
+              <p>Ponles color o la foto de su cartel y separa la compra de cada uno.</p>
+            </div>
+            <img
+              src="img/supermercados.webp"
+              width="600"
+              height="360"
+              alt="Supermercados de la casa, cada uno con su color"
+              loading="lazy"
+            />
+          </article>
+          <article class="tile tile-plain reveal">
+            <h3>Sin anuncios</h3>
+            <p>No hay publicidad ni seguimiento, y tus datos no se venden.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="privacy-band reveal">
+        <h2>Tus datos son de tu casa</h2>
+        <p>
+          Solo guardamos lo necesario para que la despensa funcione, en servidores europeos y del
+          Reino Unido.
+        </p>
+        <a class="text-link" href="privacidad.html">Lee la política de privacidad</a>
+      </section>
     </main>
+
+    <footer class="footer">
+      <a class="brand brand-small" href="./" aria-label="TuDespensa, inicio">
+        <img src="logo.svg" alt="" width="28" height="28" />
+        <span class="wordmark"><span class="light">Tu</span>Despensa</span>
+      </a>
+      <nav aria-label="Pie de página">
+        <a href="privacidad.html">Privacidad</a>
+        <a href="mailto:hola@tudespensa.es">hola@tudespensa.es</a>
+      </nav>
+      <p class="muted">© 2026 TuDespensa</p>
+    </footer>
+
+    <script>
+      // Fades sections in as they reach the viewport; skipped for reduced motion.
+      (() => {
+        const items = document.querySelectorAll('.reveal');
+        if (matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) {
+          items.forEach((el) => el.classList.add('in'));
+          return;
+        }
+        const io = new IntersectionObserver(
+          (entries) => {
+            for (const e of entries) {
+              if (!e.isIntersecting) continue;
+              e.target.classList.add('in');
+              io.unobserve(e.target);
+            }
+          },
+          { threshold: 0.15 },
+        );
+        items.forEach((el) => io.observe(el));
+      })();
+    </script>
   </body>
 </html>
