@@ -124,7 +124,7 @@ p {
 .hero h1 {
   font-size: clamp(2.6rem, 6vw, 4.6rem);
   font-weight: 800;
-  max-width: 12ch;
+  max-width: 14ch;
 }
 .lead {
   margin-top: 20px;
@@ -301,7 +301,8 @@ p {
 }
 .footer nav {
   display: flex;
-  gap: 24px;
+  flex-wrap: wrap;
+  gap: 8px 24px;
   margin-left: auto;
 }
 .footer nav a {
@@ -396,9 +397,224 @@ p {
     align-items: stretch;
   }
   .tile-wide img {
-    max-width: none;
+    width: 100%;
+    max-width: 100%;
   }
   .footer nav {
     margin-left: 0;
+  }
+}
+
+/* Header links */
+.nav-links {
+  display: flex;
+  gap: 24px;
+}
+
+/* FAQ */
+.faq,
+.guides {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 48px 24px 96px;
+}
+.faq h2,
+.guides h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+}
+.faq-list {
+  margin-top: 32px;
+  max-width: 760px;
+  border-top: 1px solid var(--border);
+}
+.faq details {
+  border-bottom: 1px solid var(--border);
+}
+.faq summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+.faq summary::-webkit-details-marker {
+  display: none;
+}
+.faq summary::after {
+  content: '+';
+  color: var(--accent);
+  font-weight: 800;
+  transition: transform 0.2s ease;
+}
+.faq details[open] summary::after {
+  transform: rotate(45deg);
+}
+.faq details p {
+  padding-bottom: 20px;
+  color: var(--muted);
+  max-width: 62ch;
+}
+
+/* Guides */
+.guide-grid {
+  margin-top: 32px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+.guide-card {
+  display: block;
+  padding: 28px;
+  border-radius: var(--radius);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text);
+  text-decoration: none;
+  transition: border-color 0.2s ease;
+}
+.guide-card:hover {
+  border-color: var(--accent);
+}
+.guide-card h3 {
+  font-size: 1.3rem;
+}
+.guide-card p {
+  margin-top: 8px;
+  color: var(--muted);
+}
+
+/* Guide article pages reuse .legal; extras */
+.legal .crumbs {
+  margin-top: 24px;
+  font-size: 0.95rem;
+}
+.legal .cta {
+  margin-top: 2.4rem;
+  padding: 24px;
+  border-radius: var(--radius);
+  background: var(--accent-soft);
+}
+.legal .cta p {
+  margin: 0;
+}
+.legal .cta p + p {
+  margin-top: 0.6rem;
+}
+
+@media (max-width: 767px) {
+  .faq,
+  .guides {
+    padding: 32px 16px 64px;
+  }
+  .guide-grid {
+    grid-template-columns: 1fr;
+  }
+  .nav-links {
+    gap: 16px;
+  }
+  .nav-link-wide {
+    display: none;
+  }
+}
+
+/* Pricing */
+.pricing {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 48px 24px 96px;
+}
+.pricing h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+}
+.pricing-lead {
+  margin-top: 16px;
+  max-width: 52ch;
+  color: var(--muted);
+}
+.plans {
+  margin-top: 32px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+.plan {
+  position: relative;
+  padding: 32px 28px;
+  border-radius: var(--radius);
+  background: var(--surface);
+  border: 1px solid var(--border);
+}
+.plan-pro {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+}
+.plan h3 {
+  font-size: 1.4rem;
+}
+.plan-badge {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--on-accent);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+.price {
+  margin-top: 12px;
+  color: var(--muted);
+}
+.price strong {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: var(--text);
+  letter-spacing: -0.02em;
+}
+.plan-note {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+.plan-source {
+  margin-top: 16px;
+  padding: 12px 16px;
+  border-left: 3px solid var(--accent);
+  border-radius: 8px;
+  background: var(--surface);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+.plan ul {
+  margin: 20px 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 10px;
+}
+.plan li {
+  padding-left: 28px;
+  position: relative;
+}
+.plan li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: 800;
+}
+
+@media (max-width: 767px) {
+  .pricing {
+    padding: 32px 16px 64px;
+  }
+  .plans {
+    grid-template-columns: 1fr;
   }
 }

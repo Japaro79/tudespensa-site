@@ -3,20 +3,131 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>TuDespensa · La despensa y la compra de tu casa</title>
+    <title>Lista de la compra compartida y despensa | TuDespensa</title>
     <meta
       name="description"
-      content="Escaneas lo que gastas y la lista de la compra se hace sola, compartida con toda la casa."
+      content="App para llevar la despensa de casa: escaneas el código de barras al gastar y la lista de la compra se hace sola, compartida con toda la familia."
     />
-    <meta property="og:title" content="TuDespensa" />
+    <link rel="canonical" href="https://tudespensa.es/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:site_name" content="TuDespensa" />
+    <meta property="og:url" content="https://tudespensa.es/" />
+    <meta property="og:title" content="TuDespensa · Lista de la compra compartida y despensa" />
     <meta
       property="og:description"
       content="La despensa y la lista de la compra de tu casa, compartidas entre todos los móviles."
     />
-    <meta property="og:image" content="https://tudespensa.es/icon.png" />
+    <meta property="og:image" content="https://tudespensa.es/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="TuDespensa: la despensa y la lista de la compra de casa en el móvil"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="theme-color" content="#3B6D11" />
     <link rel="icon" href="logo.svg" type="image/svg+xml" />
     <link rel="icon" href="favicon.png" sizes="48x48" />
+    <link rel="apple-touch-icon" href="icon.png" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://tudespensa.es/#organization",
+            "name": "TuDespensa",
+            "url": "https://tudespensa.es/",
+            "logo": "https://tudespensa.es/icon.png",
+            "email": "hola@tudespensa.es"
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://tudespensa.es/#website",
+            "name": "TuDespensa",
+            "url": "https://tudespensa.es/",
+            "inLanguage": "es-ES",
+            "publisher": {
+              "@id": "https://tudespensa.es/#organization"
+            }
+          },
+          {
+            "@type": "MobileApplication",
+            "name": "TuDespensa",
+            "operatingSystem": "Android",
+            "applicationCategory": "LifestyleApplication",
+            "inLanguage": "es-ES",
+            "description": "Despensa y lista de la compra compartidas entre los móviles de una casa. Escanea el código de barras al gastar y la lista se completa sola, ordenada por supermercado, con avisos de alérgenos.",
+            "image": "https://tudespensa.es/img/despensa.webp",
+            "publisher": {
+              "@id": "https://tudespensa.es/#organization"
+            }
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "¿TuDespensa es gratis?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Sí. La despensa compartida, el escaneo, la lista de la compra automática, los supermercados y los avisos de alérgenos son gratis y sin anuncios. Más adelante llegará TuDespensa Pro, una suscripción opcional por casa."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "¿Qué incluye TuDespensa Pro y cuánto cuesta?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Pro lee los tickets de la compra con IA, en foto o en PDF, y repone la despensa de golpe (hasta 60 tickets al mes). Con los precios de esos tickets guarda el historial de cada producto, te dice en qué supermercado te sale más barato y te enseña el gasto de la casa. Cuesta 2,99 € al mes o 24,99 € al año por casa, con 14 días de prueba gratis. Lo paga una persona y lo disfruta toda la casa. Los precios no los ponemos nosotros ni vienen de internet: salen solo de los tickets que escanea tu casa."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "¿Cómo comparto la lista de la compra con mi familia?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Quien crea la casa recibe un código. El resto de la familia lo introduce en su móvil y entra en la misma casa: la despensa y la lista de la compra se actualizan en todos los móviles al momento."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "¿Necesito una contraseña?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. Entras con tu correo y un código de 8 cifras que te llega por email, o con tu cuenta de Google."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "¿Cómo sabe la app qué producto he escaneado?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Al escanear un código de barras nuevo, la app consulta Open Food Facts, una base de datos abierta de alimentos, y rellena el nombre, la foto y los alérgenos. Solo se envía el código de barras, nunca datos tuyos."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "¿Avisa de alérgenos e intolerancias?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Sí. Marca en Ajustes lo que alguien de casa no puede tomar, como la leche o el gluten, y la app te avisa al escanear un producto que lo lleve y en la lista de la compra."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "¿En qué móviles funciona?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "TuDespensa llegará primero a Android."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
     <link rel="stylesheet" href="style.css" />
     <script>
       document.documentElement.classList.add('js');
@@ -28,13 +139,17 @@
         <img src="logo.svg" alt="" width="36" height="36" />
         <span class="wordmark"><span class="light">Tu</span>Despensa</span>
       </a>
-      <a class="nav-link" href="privacidad.html">Privacidad</a>
+      <nav class="nav-links" aria-label="Principal">
+        <a class="nav-link" href="#precios">Precios</a>
+        <a class="nav-link" href="#preguntas">Preguntas</a>
+        <a class="nav-link nav-link-wide" href="privacidad.html">Privacidad</a>
+      </nav>
     </header>
 
     <main>
       <section class="hero">
         <div class="hero-copy reveal">
-          <h1>Tu despensa, siempre al día.</h1>
+          <h1>Tu despensa y lista de la compra, siempre al día.</h1>
           <p class="lead">
             Escaneas lo que gastas y la lista de la compra se hace sola, compartida con toda la casa.
           </p>
@@ -137,6 +252,128 @@
         </div>
       </section>
 
+      <section class="pricing" id="precios" aria-labelledby="pricing-title">
+        <h2 id="pricing-title" class="reveal">Gratis para toda la casa</h2>
+        <p class="pricing-lead reveal">
+          Todo lo que necesita una casa es gratis. Pro ahorra tiempo y dinero con los tickets de la
+          compra.
+        </p>
+        <div class="plans">
+          <article class="plan reveal">
+            <h3>Gratis</h3>
+            <p class="price"><strong>0 €</strong></p>
+            <p class="plan-note">Sin anuncios, sin límite de productos ni de móviles.</p>
+            <ul>
+              <li>Despensa compartida entre todos los móviles de la casa</li>
+              <li>Escanear al gastar y lista de la compra automática</li>
+              <li>Lista por supermercado y modo compra</li>
+              <li>Avisos de alérgenos e intolerancias</li>
+            </ul>
+          </article>
+          <article class="plan plan-pro reveal">
+            <p class="plan-badge">Próximamente</p>
+            <h3>Pro</h3>
+            <p class="price"><strong>2,99 €</strong> al mes por casa</p>
+            <p class="plan-note">
+              O 24,99 € al año. 14 días de prueba gratis. Lo paga una persona y lo disfruta toda la
+              casa.
+            </p>
+            <p class="plan-source">
+              Todo sale de tus tickets: la IA lee cada producto y lo que pagaste por él. Los precios
+              no los ponemos nosotros ni vienen de internet.
+            </p>
+            <ul>
+              <li>
+                Tickets con IA: haz una foto al ticket o sube el PDF y la despensa se repone de golpe
+                (hasta 60 tickets al mes)
+              </li>
+              <li>
+                Historial de precios sacado de tus tickets y aviso de en qué supermercado te sale más
+                barato cada producto
+              </li>
+              <li>
+                Gasto de la casa por mes, por supermercado y por familia de producto, también a
+                partir de los tickets
+              </li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="faq" id="preguntas" aria-labelledby="faq-title">
+        <h2 id="faq-title" class="reveal">Preguntas frecuentes</h2>
+        <div class="faq-list">
+          <details class="reveal">
+            <summary>¿TuDespensa es gratis?</summary>
+            <p>
+              Sí. La despensa compartida, el escaneo, la lista de la compra automática, los
+              supermercados y los avisos de alérgenos son gratis y sin anuncios. Más adelante
+              llegará TuDespensa Pro, una suscripción opcional por casa.
+            </p>
+          </details>
+          <details class="reveal">
+            <summary>¿Qué incluye TuDespensa Pro y cuánto cuesta?</summary>
+            <p>
+              Pro lee los tickets de la compra con IA, en foto o en PDF, y repone la despensa de
+              golpe (hasta 60 tickets al mes). Con los precios de esos tickets guarda el historial de
+              cada producto, te dice en qué supermercado te sale más barato y te enseña el gasto de
+              la casa. Cuesta
+              2,99 € al mes o 24,99 € al año por casa, con 14 días de prueba gratis. Lo paga una
+              persona y lo disfruta toda la casa. Los precios no los ponemos nosotros ni vienen de internet: salen solo de los
+              tickets que escanea tu casa.
+            </p>
+          </details>
+          <details class="reveal">
+            <summary>¿Cómo comparto la lista de la compra con mi familia?</summary>
+            <p>
+              Quien crea la casa recibe un código. El resto de la familia lo introduce en su móvil y
+              entra en la misma casa: la despensa y la lista de la compra se actualizan en todos los
+              móviles al momento.
+            </p>
+          </details>
+          <details class="reveal">
+            <summary>¿Necesito una contraseña?</summary>
+            <p>
+              No. Entras con tu correo y un código de 8 cifras que te llega por email, o con tu
+              cuenta de Google.
+            </p>
+          </details>
+          <details class="reveal">
+            <summary>¿Cómo sabe la app qué producto he escaneado?</summary>
+            <p>
+              Al escanear un código de barras nuevo, la app consulta Open Food Facts, una base de
+              datos abierta de alimentos, y rellena el nombre, la foto y los alérgenos. Solo se
+              envía el código de barras, nunca datos tuyos.
+            </p>
+          </details>
+          <details class="reveal">
+            <summary>¿Avisa de alérgenos e intolerancias?</summary>
+            <p>
+              Sí. Marca en Ajustes lo que alguien de casa no puede tomar, como la leche o el gluten,
+              y la app te avisa al escanear un producto que lo lleve y en la lista de la compra.
+            </p>
+          </details>
+          <details class="reveal">
+            <summary>¿En qué móviles funciona?</summary>
+            <p>TuDespensa llegará primero a Android.</p>
+          </details>
+        </div>
+      </section>
+
+      <section class="guides" aria-labelledby="guides-title">
+        <h2 id="guides-title" class="reveal">Guías para la compra de casa</h2>
+        <div class="guide-grid">
+          <a class="guide-card reveal" href="guias/organizar-la-despensa.html">
+            <h3>Cómo organizar la despensa de casa</h3>
+            <p>Familias, stock mínimo y un sistema que no dependa de la memoria de nadie.</p>
+          </a>
+          <a class="guide-card reveal" href="guias/lista-de-la-compra-compartida.html">
+            <h3>Lista de la compra compartida en familia</h3>
+            <p>Cómo dejar de comprar dos veces lo mismo y de olvidar lo que falta.</p>
+          </a>
+        </div>
+      </section>
+
       <section class="privacy-band reveal">
         <h2>Tus datos son de tu casa</h2>
         <p>
@@ -153,6 +390,8 @@
         <span class="wordmark"><span class="light">Tu</span>Despensa</span>
       </a>
       <nav aria-label="Pie de página">
+        <a href="guias/organizar-la-despensa.html">Organizar la despensa</a>
+        <a href="guias/lista-de-la-compra-compartida.html">Lista de la compra compartida</a>
         <a href="privacidad.html">Privacidad</a>
         <a href="mailto:hola@tudespensa.es">hola@tudespensa.es</a>
       </nav>
