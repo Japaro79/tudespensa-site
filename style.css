@@ -195,7 +195,7 @@ p {
   max-width: 46ch;
 }
 
-/* Features bento: 4 tiles in a 6-column grid (3+3, 4+2) */
+/* Features bento: 5 tiles in a 6-column grid (3+3, 6, 3+3) */
 .features {
   padding-top: 48px;
   padding-bottom: 96px;
@@ -247,7 +247,7 @@ p {
   box-shadow: 0 12px 30px -18px rgb(0 0 0 / 0.35);
 }
 .tile-wide {
-  grid-column: span 4;
+  grid-column: span 6;
   background: var(--surface);
   border: 1px solid var(--border);
   flex-direction: row;
@@ -262,7 +262,7 @@ p {
   margin-top: 0;
 }
 .tile-plain {
-  grid-column: span 2;
+  grid-column: span 3;
   background: var(--surface);
   border: 1px solid var(--border);
   justify-content: flex-end;
