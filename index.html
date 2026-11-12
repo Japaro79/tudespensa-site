@@ -140,6 +140,10 @@
     <link rel="stylesheet" href="style.css" />
     <script>
       document.documentElement.classList.add('js');
+      try {
+        const saved = localStorage.getItem('theme');
+        if (saved === 'light' || saved === 'dark') document.documentElement.dataset.theme = saved;
+      } catch {}
     </script>
   </head>
   <body>
@@ -150,10 +154,18 @@
         <span class="wordmark"><span class="light">Tu</span>Despensa</span>
       </a>
       <nav class="nav-links" aria-label="Principal">
-        <a class="nav-link nav-link-wide" href="#novedades">Novedades</a>
+        <a class="nav-link nav-link-wide" href="#caracteristicas">Características</a>
         <a class="nav-link" href="#precios">Precios</a>
         <a class="nav-link" href="#preguntas">Preguntas</a>
         <a class="nav-link nav-link-wide" href="privacidad.html">Privacidad</a>
+        <div class="theme-switch" role="group" aria-label="Ver la app en modo claro u oscuro">
+          <button type="button" data-set-theme="light" aria-pressed="false">
+            <span aria-hidden="true">☀️</span><span class="theme-label">Claro</span>
+          </button>
+          <button type="button" data-set-theme="dark" aria-pressed="false">
+            <span aria-hidden="true">🌙</span><span class="theme-label">Oscuro</span>
+          </button>
+        </div>
       </nav>
     </header>
 
@@ -169,16 +181,8 @@
           </div>
         </div>
         <figure class="phone phone-hero reveal">
-          <picture>
-            <source srcset="img/despensa-oscuro.webp" media="(prefers-color-scheme: dark)" />
-            <img
-              src="img/despensa.webp"
-              width="600"
-              height="1147"
-              alt="Despensa de una casa con los productos agrupados por familia y su stock"
-              fetchpriority="high"
-            />
-          </picture>
+          <img class="shot-light" src="img/despensa.webp" width="600" height="1333" alt="Despensa de una casa con los productos agrupados por familia y su stock" />
+          <img class="shot-dark" src="img/despensa-oscuro.webp" width="600" height="1333" alt="Despensa de una casa con los productos agrupados por familia y su stock" />
         </figure>
       </section>
     </div>
@@ -186,13 +190,8 @@
     <main>
       <section class="how">
         <figure class="phone phone-tilt reveal">
-          <img
-            src="img/compra.webp"
-            width="600"
-            height="1147"
-            alt="Lista de la compra separada por supermercado y por familia, con la barra de progreso del carro"
-            loading="lazy"
-          />
+          <img class="shot-light" src="img/compra.webp" width="600" height="1333" alt="Lista de la compra separada por supermercado y por familia, con la barra de progreso del carro" loading="lazy" />
+          <img class="shot-dark" src="img/compra-oscuro.webp" width="600" height="1333" alt="Lista de la compra separada por supermercado y por familia, con la barra de progreso del carro" loading="lazy" />
         </figure>
         <div class="how-copy">
           <h2 class="reveal">Tres gestos y te olvidas</h2>
@@ -235,32 +234,22 @@
               <h3>Avisos de alérgenos</h3>
               <p>Marca lo que nadie puede tomar y te avisa al escanear un producto que lo lleve.</p>
             </div>
-            <img
-              src="img/intolerancias.webp"
-              width="600"
-              height="557"
-              alt="Intolerancias de la casa, con leche y lactosa marcadas"
-              loading="lazy"
-            />
+            <img class="shot-light" src="img/intolerancias.webp" width="600" height="560" alt="Intolerancias de la casa, con leche y lactosa marcadas" loading="lazy" />
+            <img class="shot-dark" src="img/intolerancias-oscuro.webp" width="600" height="560" alt="Intolerancias de la casa, con leche y lactosa marcadas" loading="lazy" />
           </article>
           <article class="tile tile-image tile-wide reveal">
             <div>
               <h3>Tus supermercados</h3>
               <p>Ponles color o la foto de su cartel y separa la compra de cada uno.</p>
             </div>
-            <img
-              src="img/supermercados.webp"
-              width="600"
-              height="280"
-              alt="Supermercados de la casa, cada uno con su color"
-              loading="lazy"
-            />
+            <img class="shot-light" src="img/supermercados.webp" width="600" height="295" alt="Supermercados de la casa, cada uno con su color" loading="lazy" />
+            <img class="shot-dark" src="img/supermercados-oscuro.webp" width="600" height="295" alt="Supermercados de la casa, cada uno con su color" loading="lazy" />
           </article>
           <article class="tile tile-plain reveal">
             <h3>Fichas que se rellenan solas</h3>
             <p>
               Al escanear un producto nuevo, la app trae su foto, nombre y alérgenos de Open Food
-              Facts. En las capturas verás iconos en su lugar: las fotos reales son de cada marca. Toca un producto y la ves en grande.
+              Facts. En las capturas verás iconos en su lugar: las fotos reales son de cada marca.
             </p>
           </article>
           <article class="tile tile-plain reveal">
@@ -270,17 +259,16 @@
         </div>
       </section>
 
-      <section class="news" id="novedades" aria-labelledby="news-title">
-        <h2 id="news-title" class="reveal">Novedades de la versión 1.0</h2>
+      <section class="news" id="caracteristicas" aria-labelledby="news-title">
+        <h2 id="news-title" class="reveal">Pensada para el día a día</h2>
         <p class="news-lead reveal">
-          Un diseño nuevo, más claro y más rápido de leer en el pasillo del súper, y lo que nos
-          habéis pedido.
+          Detalles que se notan en la cocina y en el pasillo del súper.
         </p>
         <div class="news-grid">
           <article class="news-card reveal">
-            <span class="news-icon" aria-hidden="true">🎨</span>
-            <h3>Diseño Fresco</h3>
-            <p>Tarjetas limpias, cabecera verde y botones grandes. Con modo claro y oscuro.</p>
+            <span class="news-icon" aria-hidden="true">🌗</span>
+            <h3>Modo claro y oscuro</h3>
+            <p>Sigue el tema de tu móvil. Prueba los dos con el botón de arriba.</p>
           </article>
           <article class="news-card reveal">
             <span class="news-icon" aria-hidden="true">📂</span>
@@ -314,8 +302,8 @@
           </article>
           <article class="news-card reveal">
             <span class="news-icon" aria-hidden="true">🗣️</span>
-            <h3>En catalán</h3>
-            <p>La app ya está en castellano, catalán e inglés. Cada móvil elige el suyo.</p>
+            <h3>En tres idiomas</h3>
+            <p>Castellano, catalán e inglés. Cada móvil de la casa elige el suyo.</p>
           </article>
           <article class="news-card reveal">
             <span class="news-icon" aria-hidden="true">📶</span>
@@ -477,6 +465,30 @@
       <p class="muted">© 2026 TuDespensa</p>
     </footer>
 
+    <script>
+      // Light/dark switch: shows the site and the app screenshots in either mode.
+      (() => {
+        const root = document.documentElement;
+        const buttons = document.querySelectorAll('[data-set-theme]');
+        const current = () =>
+          root.dataset.theme || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        const sync = () => {
+          const theme = current();
+          buttons.forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.setTheme === theme)));
+        };
+        buttons.forEach((b) =>
+          b.addEventListener('click', () => {
+            root.dataset.theme = b.dataset.setTheme;
+            try {
+              localStorage.setItem('theme', b.dataset.setTheme);
+            } catch {}
+            sync();
+          }),
+        );
+        matchMedia('(prefers-color-scheme: dark)').addEventListener('change', sync);
+        sync();
+      })();
+    </script>
     <script>
       // Fades sections in as they reach the viewport; skipped for reduced motion.
       (() => {
