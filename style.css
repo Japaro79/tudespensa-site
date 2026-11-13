@@ -1151,3 +1151,324 @@ p {
 .skip-link:focus {
   top: 16px;
 }
+
+/* Tutorials: numbered steps next to app screenshots with tap marks */
+.legal.tutorial {
+  max-width: 880px;
+}
+.tut-lead {
+  font-size: 1.15rem;
+  color: var(--muted);
+}
+.tut-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 1.2rem;
+  padding: 0;
+  list-style: none;
+}
+.legal .tut-meta li + li {
+  margin-top: 0;
+}
+.tut-meta li {
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--on-accent-soft);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.tut-toc {
+  margin-top: 1.6rem;
+  padding: 20px 24px;
+  border-radius: var(--radius);
+  background: var(--surface);
+  border: 1px solid var(--border);
+}
+.tut-toc strong {
+  display: block;
+  margin-bottom: 6px;
+}
+.legal .tut-toc ol {
+  margin: 0;
+  padding-left: 1.3rem;
+}
+.tut-toc a {
+  color: var(--text);
+}
+.step {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  gap: 40px;
+  align-items: center;
+  margin-top: 3rem;
+  padding-top: 2.4rem;
+  border-top: 1px solid var(--border);
+  scroll-margin-top: 16px;
+}
+.legal .step-text h2 {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 0;
+}
+.step-num {
+  flex: none;
+  display: inline-grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: var(--on-accent);
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+.legal ol.taps {
+  margin-top: 0.8rem;
+  padding-left: 0;
+  list-style: none;
+  counter-reset: tap;
+}
+.legal ol.taps li {
+  position: relative;
+  padding-left: 38px;
+  counter-increment: tap;
+}
+.legal ol.taps li::before {
+  content: counter(tap);
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--highlight);
+  color: var(--on-highlight);
+  font-size: 0.85rem;
+  font-weight: 800;
+}
+.shot {
+  margin: 0;
+  justify-self: center;
+  width: 100%;
+  max-width: 300px;
+}
+.shot .phone {
+  max-width: none;
+}
+/* Screen colour behind the screenshot, so a slow image never shows a black block. */
+.shot-screen {
+  position: relative;
+  border-radius: 22px;
+  background: var(--bg);
+}
+/* No display here: .shot-light/.shot-dark decide which one shows. */
+.shot-screen img {
+  vertical-align: top;
+}
+/* Numbered tap mark; --x/--y are percentages of the screenshot. */
+.mark {
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  display: grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  margin: -11px 0 0 -11px;
+  border-radius: 50%;
+  background: var(--highlight);
+  color: var(--on-highlight);
+  font-size: 0.72rem;
+  font-weight: 800;
+  box-shadow:
+    0 0 0 2px rgb(255 255 255 / 0.9),
+    0 4px 12px rgb(0 0 0 / 0.35);
+  z-index: 2;
+}
+.mark::after {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  border: 3px solid var(--highlight);
+  opacity: 0;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .mark::after {
+    animation: mark-pulse 2.4s ease-out infinite;
+  }
+}
+@keyframes mark-pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  70%,
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+/* Highlight box around an area; --x/--y/--w/--h are percentages of the screenshot. */
+.ring {
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  width: var(--w);
+  height: var(--h);
+  border: 3px solid var(--highlight);
+  border-radius: 12px;
+  box-shadow: 0 0 0 4px rgb(255 176 32 / 0.25);
+  z-index: 1;
+  pointer-events: none;
+}
+.shot figcaption {
+  margin-top: 12px;
+  font-size: 0.9rem;
+  color: var(--muted);
+  text-align: center;
+}
+.tip {
+  margin-top: 1rem;
+  padding: 14px 18px;
+  border-radius: 16px;
+  background: var(--highlight-soft);
+  border-left: 4px solid var(--highlight);
+}
+.legal .tip p {
+  margin: 0;
+}
+/* Text-only steps and wide figures take the full width */
+.step.one-col {
+  grid-template-columns: 1fr;
+}
+.shot-wide {
+  max-width: none;
+}
+.shot-wide .pro-demo {
+  margin: 0;
+}
+/* Screens drawn in HTML when the demo app cannot show them; same 600x1333 screen as the screenshots */
+.mock-phone {
+  box-sizing: border-box;
+  aspect-ratio: 290 / 627;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 29px;
+  background: var(--bg);
+  border: 7px solid var(--frame);
+  box-shadow: var(--shadow);
+  font-size: 0.85rem;
+}
+.legal .mock-phone .mock-status {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 16px 0;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+.mock-screen {
+  flex: 1;
+  padding: 18px 16px;
+}
+.legal .mock-phone p {
+  margin: 0;
+}
+.legal .mock-phone p + p,
+.legal .mock-phone .mock-card + .mock-card {
+  margin-top: 10px;
+}
+.mock-title {
+  font-size: 1.3rem;
+  font-weight: 800;
+}
+.mock-muted {
+  color: var(--muted);
+}
+.mock-card {
+  margin-top: 12px;
+  padding: 14px;
+  border-radius: 18px;
+  background: var(--surface);
+}
+.mock-dim {
+  opacity: 0.55;
+}
+.mock-label {
+  font-weight: 700;
+}
+.mock-field-label {
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+.mock-field,
+.mock-button {
+  position: relative;
+  padding: 10px 14px;
+  border-radius: 999px;
+}
+.mock-field {
+  border: 1.5px solid var(--muted);
+  letter-spacing: 0.08em;
+}
+.mock-button {
+  background: var(--accent);
+  color: var(--on-accent);
+  font-weight: 700;
+  text-align: center;
+}
+.mock-outline {
+  background: transparent;
+  color: var(--text);
+  border: 1.5px solid var(--muted);
+}
+.mock-pill {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--on-accent-soft);
+  font-weight: 600;
+}
+.mark-inline {
+  left: auto;
+  right: -6px;
+  top: 50%;
+  margin: -11px 0 0 0;
+}
+.legal .related {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-top: 1rem;
+}
+.legal .related .guide-card {
+  padding: 20px;
+  border-color: var(--border);
+}
+.legal .related .guide-card:hover {
+  border-color: var(--accent);
+}
+.legal .related .guide-card h3 {
+  font-size: 1.05rem;
+}
+@media (max-width: 767px) {
+  .step {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .shot {
+    max-width: 290px;
+  }
+  .legal .related {
+    grid-template-columns: 1fr;
+  }
+}
