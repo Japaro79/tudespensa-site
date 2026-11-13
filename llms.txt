@@ -1,0 +1,15 @@
+# TuDespensa
+
+> TuDespensa es una app en español para llevar la despensa de casa y la lista de la compra, compartidas entre todos los móviles de la casa. Escaneas el código de barras al gastar un producto y la lista de la compra se completa sola, ordenada por supermercado y con avisos de alérgenos. Es gratis y sin anuncios. TuDespensa Pro (2,99 € al mes por casa) lee los tickets de la compra con IA para reponer la despensa con una foto.
+
+Llega primero a Android y, más adelante, a iPhone. Contacto: hola@tudespensa.es
+
+## Páginas
+
+- [Inicio](https://tudespensa.es/): qué hace la app, funciones, precios y preguntas frecuentes
+- [Política de privacidad](https://tudespensa.es/privacidad.html): qué datos usa la app, para qué y con quién se comparten
+
+## Guías
+
+- [Cómo organizar la despensa de casa paso a paso](https://tudespensa.es/guias/organizar-la-despensa.html): familias, stock mínimo y apuntar al gastar
+- [Lista de la compra compartida en familia](https://tudespensa.es/guias/lista-de-la-compra-compartida.html): una sola lista para toda la casa, ordenada por supermercado

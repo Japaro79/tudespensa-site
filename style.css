@@ -1134,3 +1134,20 @@ p {
     grid-template-columns: 1fr;
   }
 }
+
+/* Keyboard users can jump past the header; hidden until focused. */
+.skip-link {
+  position: absolute;
+  left: 16px;
+  top: -100px;
+  z-index: 100;
+  padding: 10px 16px;
+  border-radius: 12px;
+  background: var(--accent);
+  color: var(--on-accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+.skip-link:focus {
+  top: 16px;
+}
