@@ -842,3 +842,295 @@ p {
     display: none;
   }
 }
+
+/* Hero link to the Pro section */
+.hero-pro {
+  margin-top: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 16px 6px 6px;
+  border-radius: 999px;
+  background: rgb(255 255 255 / 0.14);
+  color: var(--on-header);
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+}
+.hero-pro:hover {
+  background: rgb(255 255 255 / 0.22);
+}
+.hero-pro-tag {
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--highlight);
+  color: var(--on-highlight);
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+/* Pro: copy and steps beside a receipt turning into the app's restock list */
+.pro {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 56px 24px 96px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px 64px;
+  align-items: center;
+}
+.eyebrow {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: var(--highlight-soft);
+  color: var(--text);
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+.pro h2 {
+  margin-top: 16px;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  max-width: 16ch;
+}
+.pro-lead {
+  margin-top: 16px;
+  color: var(--muted);
+  max-width: 46ch;
+}
+.pro-steps {
+  list-style: none;
+  margin: 28px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 16px;
+}
+.pro-steps li {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+.pro-step-icon {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  background: var(--accent-soft);
+  font-size: 1.3rem;
+}
+.pro-steps h3 {
+  font-size: 1.1rem;
+}
+.pro-steps p {
+  margin-top: 2px;
+  color: var(--muted);
+  font-size: 0.95rem;
+  max-width: 44ch;
+}
+
+.pro-demo {
+  position: relative;
+  display: grid;
+  grid-template-columns: 0.9fr 1fr;
+  align-items: center;
+}
+.receipt {
+  position: relative;
+  z-index: 0;
+  padding: 22px 18px 26px;
+  background: #fdfcf8;
+  color: #2b2b2b;
+  font: 0.78rem/1.5 ui-monospace, 'Cascadia Mono', Consolas, monospace;
+  transform: rotate(-4deg);
+  box-shadow: 0 24px 40px -20px rgb(0 0 0 / 0.45);
+  /* Torn bottom edge */
+  -webkit-mask: conic-gradient(from -45deg at bottom, #0000, #000 1deg 89deg, #0000 90deg) 50% / 12px 100%;
+  mask: conic-gradient(from -45deg at bottom, #0000, #000 1deg 89deg, #0000 90deg) 50% / 12px 100%;
+}
+.receipt-store {
+  text-align: center;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+.receipt-meta {
+  text-align: center;
+  color: #777;
+  margin-bottom: 10px;
+}
+.receipt dl {
+  margin: 0;
+  padding: 8px 0;
+  border-top: 1px dashed #bbb;
+  border-bottom: 1px dashed #bbb;
+}
+.receipt dl div {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+.receipt dt {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.receipt dd {
+  margin: 0;
+  white-space: nowrap;
+}
+.receipt-total {
+  margin-top: 8px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 800;
+  font-size: 0.9rem;
+}
+
+.app-card {
+  position: relative;
+  z-index: 1;
+  margin-left: 20px;
+  padding: 18px 16px 16px;
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow:
+    0 0 0 1px var(--border),
+    var(--shadow);
+  font-size: 0.9rem;
+}
+.app-card-title {
+  font-weight: 800;
+}
+.app-lines {
+  list-style: none;
+  margin: 10px 0 14px;
+  padding: 0;
+  display: grid;
+  gap: 4px;
+}
+.app-lines li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 0;
+  border-bottom: 1px solid var(--border);
+}
+.app-dot {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+  background: var(--bg);
+}
+.app-name {
+  flex: 1;
+  min-width: 0;
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.app-qty {
+  color: var(--accent);
+  font-weight: 800;
+}
+.app-pill {
+  flex: none;
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+.app-pill-new {
+  background: var(--accent-soft);
+  color: var(--on-accent-soft);
+}
+.app-button {
+  padding: 10px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--on-accent);
+  text-align: center;
+  font-weight: 800;
+}
+
+.pro-facts {
+  grid-column: 1 / -1;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+.pro-facts li {
+  padding: 20px 22px;
+  border-radius: var(--radius);
+  background: var(--surface);
+  display: grid;
+  gap: 2px;
+}
+.pro-facts strong {
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--accent);
+}
+.pro-facts span {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+/* Pro plan: what is coming next */
+.plan-soon-title {
+  margin-top: 20px;
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+}
+.plan .plan-soon {
+  margin-top: 8px;
+  color: var(--muted);
+}
+.plan .plan-soon li::before {
+  content: '◷';
+  color: var(--muted);
+}
+
+@media (max-width: 899px) {
+  .pro {
+    grid-template-columns: 1fr;
+  }
+  .pro-facts {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 767px) {
+  .pro {
+    padding: 32px 16px 64px;
+  }
+  .pro-demo {
+    grid-template-columns: 1fr;
+    gap: 0;
+    max-width: 420px;
+  }
+  .receipt {
+    transform: rotate(-3deg);
+    margin: 0 32px -24px;
+  }
+  .app-card {
+    margin-left: 0;
+  }
+}
+@media (max-width: 420px) {
+  .pro-facts {
+    grid-template-columns: 1fr;
+  }
+}

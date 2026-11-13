@@ -25,6 +25,13 @@
     <link rel="icon" href="../favicon.png" sizes="48x48" />
     <link rel="apple-touch-icon" href="../icon.png" />
     <link rel="stylesheet" href="../style.css" />
+    <script>
+      // Uses the light/dark mode picked on the home page; otherwise follows the system.
+      try {
+        const saved = localStorage.getItem('theme');
+        if (saved === 'light' || saved === 'dark') document.documentElement.dataset.theme = saved;
+      } catch {}
+    </script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",

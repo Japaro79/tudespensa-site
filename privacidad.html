@@ -12,6 +12,13 @@
     <link rel="icon" href="logo.svg" type="image/svg+xml" />
     <link rel="icon" href="favicon.png" sizes="48x48" />
     <link rel="stylesheet" href="style.css" />
+    <script>
+      // Uses the light/dark mode picked on the home page; otherwise follows the system.
+      try {
+        const saved = localStorage.getItem('theme');
+        if (saved === 'light' || saved === 'dark') document.documentElement.dataset.theme = saved;
+      } catch {}
+    </script>
   </head>
   <body>
     <main class="legal">
@@ -20,7 +27,7 @@
         <span class="wordmark"><span class="light">Tu</span>Despensa</span>
       </a>
       <h1>Política de privacidad</h1>
-      <p class="muted">Última actualización: 10 de noviembre de 2026</p>
+      <p class="muted">Última actualización: 13 de noviembre de 2026</p>
 
       <p>
         TuDespensa es una app para llevar la despensa y la lista de la compra de una casa,
@@ -52,6 +59,12 @@
           envían, salvo el logo que tú decides subir.
         </li>
         <li>
+          <strong>Tickets de la compra (TuDespensa Pro):</strong> si escaneas un ticket, la foto o
+          el PDF se envían para leer sus productos, cantidades y precios, y no se guardan. Se guardan
+          los productos repuestos, el precio pagado por cada uno con el supermercado y la fecha, y un
+          registro de cada lectura para contar los tickets del mes. Lo ven las personas de tu casa.
+        </li>
+        <li>
           <strong>Una copia en tu móvil:</strong> la app guarda en el teléfono la última lista de la
           compra que vio y los cambios que hagas sin cobertura, para que puedas comprar sin conexión.
           Se envían al volver la conexión y se borran al cerrar sesión.
@@ -74,6 +87,7 @@
         <li>Guardar y sincronizar la despensa y la lista de la compra de tu casa.</li>
         <li>Enviarte por correo el código de acceso de 8 cifras cuando lo pides.</li>
         <li>Avisarte de los alérgenos de un producto según las intolerancias de tu casa.</li>
+        <li>Leer los tickets que escaneas y reponer la despensa con ellos (TuDespensa Pro).</li>
         <li>Detectar y corregir los fallos de la app.</li>
       </ul>
       <p>
@@ -99,6 +113,11 @@
           <strong>Open Food Facts</strong> recibe el código de barras de un producto nuevo para
           rellenar su nombre, imagen y alérgenos. Solo se envía el código de barras, nunca datos
           tuyos.
+        </li>
+        <li>
+          <strong>Anthropic</strong> lee con IA la foto o el PDF de los tickets que escaneas, en
+          servidores de Estados Unidos, con las cláusulas contractuales tipo de la Comisión Europea.
+          No usa los tickets para entrenar sus modelos.
         </li>
         <li>
           <strong>Sentry</strong> recibe los informes de fallos, en servidores de Alemania (UE). No

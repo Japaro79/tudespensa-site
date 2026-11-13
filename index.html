@@ -6,7 +6,7 @@
     <title>Lista de la compra compartida y despensa | TuDespensa</title>
     <meta
       name="description"
-      content="App para llevar la despensa de casa: escaneas el código de barras al gastar y la lista de la compra se hace sola, compartida con toda la familia."
+      content="App para llevar la despensa de casa: escaneas el código de barras al gastar y la lista de la compra se hace sola, compartida con toda la familia. Con Pro, una foto al ticket repone la despensa."
     />
     <link rel="canonical" href="https://tudespensa.es/" />
     <meta property="og:type" content="website" />
@@ -73,7 +73,7 @@
                 "name": "¿TuDespensa es gratis?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Sí. La despensa compartida, el escaneo, la lista de la compra automática, los supermercados y los avisos de alérgenos son gratis y sin anuncios. Más adelante llegará TuDespensa Pro, una suscripción opcional por casa."
+                  "text": "Sí. La despensa compartida, el escaneo, la lista de la compra automática, los supermercados y los avisos de alérgenos son gratis y sin anuncios. TuDespensa Pro es una suscripción opcional por casa que lee los tickets de la compra con IA."
                 }
               },
               {
@@ -81,7 +81,23 @@
                 "name": "¿Qué incluye TuDespensa Pro y cuánto cuesta?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Pro lee los tickets de la compra con IA, en foto o en PDF, y repone la despensa de golpe (hasta 60 tickets al mes). Con los precios de esos tickets guarda el historial de cada producto, te dice en qué supermercado te sale más barato y te enseña el gasto de la casa. Cuesta 2,99 € al mes o 24,99 € al año por casa, con 14 días de prueba gratis. Lo paga una persona y lo disfruta toda la casa. Los precios no los ponemos nosotros ni vienen de internet: salen solo de los tickets que escanea tu casa."
+                  "text": "Pro lee los tickets de la compra con IA, en foto o en PDF, y repone la despensa de golpe, hasta 20 tickets al mes. Cuesta 2,99 € al mes o 24,99 € al año por casa, y puedes probarlo gratis con 2 tickets. Lo paga una persona y lo disfruta toda la casa. Con los precios de esos tickets llegarán el historial de precios, el supermercado donde te sale más barato cada producto y el gasto de la casa."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "¿Qué pasa si la IA no consigue leer el ticket?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No te gasta ticket. Las lecturas fallidas no cuentan, hasta 5 al mes con Pro (o 5 en total durante la prueba gratis). Prueba con otra foto del ticket entero, plano y con buena luz."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "¿Guardáis la foto de mi ticket?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. La foto o el PDF se envían a la IA para leerlos y se descartan. Solo se guardan los productos repuestos y lo que pagaste por cada uno, dentro de tu casa."
                 }
               },
               {
@@ -155,6 +171,7 @@
       </a>
       <nav class="nav-links" aria-label="Principal">
         <a class="nav-link nav-link-wide" href="#caracteristicas">Características</a>
+        <a class="nav-link" href="#pro">Pro</a>
         <a class="nav-link" href="#precios">Precios</a>
         <a class="nav-link" href="#preguntas">Preguntas</a>
         <a class="nav-link nav-link-wide" href="privacidad.html">Privacidad</a>
@@ -175,6 +192,11 @@
           <p class="lead">
             Escaneas lo que gastas y la lista de la compra se hace sola, compartida con toda la casa.
           </p>
+          <a class="hero-pro" href="#pro">
+            <span class="hero-pro-tag">Nuevo</span>
+            Con Pro, una foto al ticket repone la despensa
+            <span aria-hidden="true">→</span>
+          </a>
           <div class="hero-actions">
             <p class="badge">Próximamente en Android</p>
             <p class="version">Versión 1.0.0</p>
@@ -216,6 +238,83 @@
             </li>
           </ol>
         </div>
+      </section>
+
+
+      <section class="pro" id="pro" aria-labelledby="pro-title">
+        <div class="pro-copy">
+          <p class="eyebrow reveal">TuDespensa Pro</p>
+          <h2 id="pro-title" class="reveal">Una foto al ticket y la despensa, repuesta.</h2>
+          <p class="pro-lead reveal">
+            Vuelves del súper y no tienes que escanear producto a producto. La IA lee cada línea del
+            ticket, la empareja con lo que ya tienes en casa y te propone reponerlo todo de golpe.
+            Tú solo confirmas.
+          </p>
+          <ol class="pro-steps">
+            <li class="reveal">
+              <span class="pro-step-icon" aria-hidden="true">📷</span>
+              <div>
+                <h3>Foto o PDF</h3>
+                <p>Desde la pestaña Compra: una foto del ticket de papel o el PDF del ticket digital.</p>
+              </div>
+            </li>
+            <li class="reveal">
+              <span class="pro-step-icon" aria-hidden="true">🔁</span>
+              <div>
+                <h3>Leído dos veces</h3>
+                <p>
+                  La IA lo lee dos veces y comprueba que las líneas suman el total. Si algo no
+                  cuadra, lo repasa con un modelo más potente.
+                </p>
+              </div>
+            </li>
+            <li class="reveal">
+              <span class="pro-step-icon" aria-hidden="true">✅</span>
+              <div>
+                <h3>Confirmas y listo</h3>
+                <p>
+                  Lo que no tenías se crea como producto nuevo. Solo te pregunta cuando duda, y lo
+                  recuerda para el próximo ticket.
+                </p>
+              </div>
+            </li>
+          </ol>
+        </div>
+
+        <div class="pro-demo reveal" role="img" aria-label="Un ticket de la compra convertido en la lista de productos a reponer, con un producto nuevo">
+          <div class="receipt" aria-hidden="true">
+            <p class="receipt-store">SUPERMERCADO</p>
+            <p class="receipt-meta">13/11/2026 · 19:42</p>
+            <dl>
+              <div><dt>LECHE SEMI 1L</dt><dd>6 × 0,89</dd></div>
+              <div><dt>PAN MOLDE INTEGRAL</dt><dd>1,45</dd></div>
+              <div><dt>HUEVOS L 12U</dt><dd>2,79</dd></div>
+              <div><dt>YOGUR NATURAL 4U</dt><dd>1,15</dd></div>
+              <div><dt>TOMATE TRITURADO</dt><dd>2 × 0,95</dd></div>
+              <div><dt>ACEITE OLIVA 1L</dt><dd>8,95</dd></div>
+            </dl>
+            <p class="receipt-total"><span>TOTAL</span><span>21,58</span></p>
+          </div>
+          <div class="app-card" aria-hidden="true">
+            <p class="app-card-title">Productos del ticket (6)</p>
+            <ul class="app-lines">
+              <li><span class="app-dot">🥛</span><span class="app-name">Leche semidesnatada</span><span class="app-qty">+6</span></li>
+              <li><span class="app-dot">🍞</span><span class="app-name">Pan de molde</span><span class="app-qty">+1</span></li>
+              <li><span class="app-dot">🥚</span><span class="app-name">Huevos</span><span class="app-qty">+1</span></li>
+              <li><span class="app-dot">🥣</span><span class="app-name">Yogur natural</span><span class="app-qty">+4</span></li>
+              <li><span class="app-dot">🍅</span><span class="app-name">Tomate triturado</span><span class="app-qty">+2</span></li>
+              <li><span class="app-dot">🫒</span><span class="app-name">Aceite de oliva</span><span class="app-pill app-pill-new">Nuevo +1</span></li>
+            </ul>
+            <p class="app-button">Reponer 6 productos</p>
+          </div>
+        </div>
+
+        <ul class="pro-facts">
+          <li class="reveal"><strong>2 tickets</strong><span>gratis para probarlo</span></li>
+          <li class="reveal"><strong>20 al mes</strong><span>de sobra para una familia</span></li>
+          <li class="reveal"><strong>Sin gastar</strong><span>si la IA no lo lee, el ticket no cuenta</span></li>
+          <li class="reveal"><strong>Toda la casa</strong><span>lo paga uno, lo usan todos los móviles</span></li>
+        </ul>
       </section>
 
       <section class="features" aria-labelledby="features-title">
@@ -316,8 +415,8 @@
       <section class="pricing" id="precios" aria-labelledby="pricing-title">
         <h2 id="pricing-title" class="reveal">Gratis para toda la casa</h2>
         <p class="pricing-lead reveal">
-          Todo lo que necesita una casa es gratis. Pro ahorra tiempo y dinero con los tickets de la
-          compra.
+          Todo lo que necesita una casa es gratis y sin anuncios. Pro te ahorra el escaneo después de
+          cada compra.
         </p>
         <div class="plans">
           <article class="plan reveal">
@@ -329,34 +428,32 @@
               <li>Escanear al gastar y lista de la compra automática</li>
               <li>Lista por supermercado y modo compra</li>
               <li>Avisos de alérgenos e intolerancias</li>
+              <li>2 tickets con IA para probar Pro</li>
             </ul>
           </article>
           <article class="plan plan-pro reveal">
-            <p class="plan-badge">Próximamente</p>
+            <p class="plan-badge">Prueba con 2 tickets</p>
             <h3>Pro</h3>
             <p class="price"><strong>2,99 €</strong> al mes por casa</p>
             <p class="plan-note">
-              O 24,99 € al año. 14 días de prueba gratis. Lo paga una persona y lo disfruta toda la
-              casa.
-            </p>
-            <p class="plan-source">
-              Todo sale de tus tickets: la IA lee cada producto y lo que pagaste por él. Los precios
-              no los ponemos nosotros ni vienen de internet.
+              O 24,99 € al año, unos dos meses gratis. Lo paga una persona y lo disfruta toda la casa.
             </p>
             <ul>
-              <li>
-                Tickets con IA: haz una foto al ticket o sube el PDF y la despensa se repone de golpe
-                (hasta 60 tickets al mes)
-              </li>
-              <li>
-                Historial de precios sacado de tus tickets y aviso de en qué supermercado te sale más
-                barato cada producto
-              </li>
-              <li>
-                Gasto de la casa por mes, por supermercado y por familia de producto, también a
-                partir de los tickets
-              </li>
+              <li>Todo lo del plan gratis</li>
+              <li>Tickets con IA, en foto o en PDF: la despensa se repone de golpe</li>
+              <li>Hasta 20 tickets al mes; los que no se pueden leer no cuentan</li>
+              <li>Productos nuevos creados directamente desde el ticket</li>
             </ul>
+            <p class="plan-soon-title">Muy pronto en Pro</p>
+            <ul class="plan-soon">
+              <li>Historial de precios de cada producto</li>
+              <li>En qué supermercado te sale más barato</li>
+              <li>Gasto de la casa por mes, súper y familia</li>
+            </ul>
+            <p class="plan-source">
+              Los precios salen solo de los tickets de tu casa. No los ponemos nosotros ni vienen de
+              internet.
+            </p>
           </article>
         </div>
       </section>
@@ -368,20 +465,33 @@
             <summary>¿TuDespensa es gratis?</summary>
             <p>
               Sí. La despensa compartida, el escaneo, la lista de la compra automática, los
-              supermercados y los avisos de alérgenos son gratis y sin anuncios. Más adelante
-              llegará TuDespensa Pro, una suscripción opcional por casa.
+              supermercados y los avisos de alérgenos son gratis y sin anuncios. TuDespensa Pro es
+              una suscripción opcional por casa que lee los tickets de la compra con IA.
             </p>
           </details>
           <details class="reveal">
             <summary>¿Qué incluye TuDespensa Pro y cuánto cuesta?</summary>
             <p>
               Pro lee los tickets de la compra con IA, en foto o en PDF, y repone la despensa de
-              golpe (hasta 60 tickets al mes). Con los precios de esos tickets guarda el historial de
-              cada producto, te dice en qué supermercado te sale más barato y te enseña el gasto de
-              la casa. Cuesta
-              2,99 € al mes o 24,99 € al año por casa, con 14 días de prueba gratis. Lo paga una
-              persona y lo disfruta toda la casa. Los precios no los ponemos nosotros ni vienen de internet: salen solo de los
-              tickets que escanea tu casa.
+              golpe, hasta 20 tickets al mes. Cuesta 2,99 € al mes o 24,99 € al año por casa, y
+              puedes probarlo gratis con 2 tickets. Lo paga una persona y lo disfruta toda la casa.
+              Con los precios de esos tickets llegarán el historial de precios, el supermercado
+              donde te sale más barato cada producto y el gasto de la casa.
+            </p>
+          </details>
+          <details class="reveal">
+            <summary>¿Qué pasa si la IA no consigue leer el ticket?</summary>
+            <p>
+              No te gasta ticket. Las lecturas fallidas no cuentan, hasta 5 al mes con Pro (o 5 en
+              total durante la prueba gratis). Prueba con otra foto del ticket entero, plano y con
+              buena luz.
+            </p>
+          </details>
+          <details class="reveal">
+            <summary>¿Guardáis la foto de mi ticket?</summary>
+            <p>
+              No. La foto o el PDF se envían a la IA para leerlos y se descartan. Solo se guardan los
+              productos repuestos y lo que pagaste por cada uno, dentro de tu casa.
             </p>
           </details>
           <details class="reveal">
