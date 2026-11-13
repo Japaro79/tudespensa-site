@@ -8,6 +8,7 @@ Llega primero a Android y, más adelante, a iPhone. Contacto: hola@tudespensa.es
 
 - [Inicio](https://tudespensa.es/): qué hace la app, funciones, precios y preguntas frecuentes
 - [Política de privacidad](https://tudespensa.es/privacidad.html): qué datos usa la app, para qué y con quién se comparten
+- [Aviso legal](https://tudespensa.es/aviso-legal.html): titular y contacto
 
 ## Guías
 

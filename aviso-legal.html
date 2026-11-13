@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Aviso legal · TuDespensa</title>
+    <meta
+      name="description"
+      content="Aviso legal de tudespensa.es, la web de TuDespensa, la app de despensa y lista de la compra compartida: titular y contacto."
+    />
+    <link rel="canonical" href="https://tudespensa.es/aviso-legal.html" />
+    <link rel="icon" href="logo.svg" type="image/svg+xml" />
+    <link rel="icon" href="favicon.png" sizes="48x48" />
+    <link rel="stylesheet" href="style.css" />
+    <script>
+      // Uses the light/dark mode picked on the home page; otherwise follows the system.
+      try {
+        const saved = localStorage.getItem('theme');
+        if (saved === 'light' || saved === 'dark') document.documentElement.dataset.theme = saved;
+      } catch {}
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+    <main id="contenido" class="legal">
+      <a class="brand" href="./" aria-label="TuDespensa, inicio">
+        <img src="logo.svg" alt="" width="36" height="36" />
+        <span class="wordmark"><span class="light">Tu</span>Despensa</span>
+      </a>
+      <h1>Aviso legal</h1>
+      <p class="muted">Última actualización: 13 de noviembre de 2026</p>
+
+      <p>
+        Esta web, tudespensa.es, informa sobre TuDespensa, una app para llevar la despensa y la
+        lista de la compra de una casa, compartida entre los móviles de quienes viven en ella.
+      </p>
+
+      <h2>Titular</h2>
+      <p>
+        El titular de esta web y de la app es el desarrollador de TuDespensa. Si necesitas sus datos
+        identificativos (nombre, NIF o domicilio), escríbenos a
+        <a href="mailto:hola@tudespensa.es">hola@tudespensa.es</a> y te los facilitaremos.
+      </p>
+
+      <h2>Contacto</h2>
+      <p>
+        Para cualquier consulta sobre la web o la app escribe a
+        <a href="mailto:hola@tudespensa.es">hola@tudespensa.es</a>.
+      </p>
+
+      <h2>Privacidad</h2>
+      <p>
+        Qué datos usa la app, para qué y con quién se comparten se explica en la
+        <a href="privacidad.html">política de privacidad</a>.
+      </p>
+    </main>
+  </body>
+</html>
