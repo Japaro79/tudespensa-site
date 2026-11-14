@@ -1379,6 +1379,7 @@ p {
   padding: 18px 16px;
 }
 .legal .mock-phone p {
+  position: relative;
   margin: 0;
 }
 .legal .mock-phone p + p,
@@ -1437,6 +1438,65 @@ p {
   background: var(--accent-soft);
   color: var(--on-accent-soft);
   font-weight: 600;
+}
+.mock-pill:has(> .mark-inline) {
+  padding-right: 26px;
+}
+.mock-pill-warn {
+  background: var(--highlight-soft);
+  color: var(--text);
+}
+.mock-pill-plain {
+  background: var(--border);
+  color: var(--text);
+}
+/* A list row of a drawn screen: name and receipt text on the left, a pill on the right */
+.mock-row {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 0;
+  border-top: 1px solid var(--border);
+}
+.mock-row:first-of-type {
+  border-top: 0;
+}
+/* On a row the pill sits on the right, so its mark goes on the left edge */
+.mock-row > .mark-inline {
+  left: -25px;
+  right: auto;
+}
+.mock-row > span:first-child {
+  flex: 1;
+  min-width: 0;
+}
+.mock-row small {
+  display: block;
+  color: var(--muted);
+  font-size: 0.7rem;
+}
+.mock-chips {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+.legal .mock-phone .mock-chips + p {
+  margin-top: 10px;
+}
+.mock-chip {
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1.5px solid var(--border);
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+.mock-chip-on {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+  color: var(--on-accent-soft);
 }
 .mark-inline {
   left: auto;
