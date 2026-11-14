@@ -693,6 +693,16 @@ p {
   margin-top: 8px;
   color: var(--muted);
 }
+/* Pro mark after the title of a Pro guide (decorative image, the title text is unchanged) */
+.pro-badge {
+  display: inline-block;
+  width: auto;
+  height: 0.8em;
+  min-height: 18px;
+  margin-left: 0.3em;
+  vertical-align: 0.05em;
+  border-radius: 999px;
+}
 
 /* Guide article pages reuse .legal; extras */
 .legal .crumbs {
@@ -1209,6 +1219,29 @@ p {
   padding-top: 2.4rem;
   border-top: 1px solid var(--border);
   scroll-margin-top: 16px;
+}
+/* Arrow at the end of each step back to the top of the guide */
+.step .to-top {
+  grid-column: 1 / -1;
+  justify-self: end;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  border: 1.5px solid var(--border);
+  color: var(--accent);
+  background: var(--surface);
+}
+.step .to-top:hover,
+.step .to-top:focus-visible {
+  border-color: var(--accent);
+}
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
 }
 .legal .step-text h2 {
   display: flex;

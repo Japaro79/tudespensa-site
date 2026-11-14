@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="56" height="24" viewBox="0 0 56 24">
+  <rect width="56" height="24" rx="12" fill="#ffb020"/>
+  <path d="M13 5.2l1.95 3.95 4.35.63-3.15 3.07.74 4.33L13 15.13l-3.89 2.05.74-4.33L6.7 9.78l4.35-.63z" fill="#15181f"/>
+  <text x="36" y="16.4" text-anchor="middle" font-family="Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="800" letter-spacing="0.6" fill="#15181f">PRO</text>
+</svg>
