@@ -34,6 +34,14 @@
         "@context": "https://schema.org",
         "@graph": [
           {
+            "@type": "Organization",
+            "@id": "https://tudespensa.es/#organization",
+            "name": "TuDespensa",
+            "url": "https://tudespensa.es/",
+            "logo": "https://tudespensa.es/icon.png",
+            "email": "hola@tudespensa.es"
+          },
+          {
             "@type": "Article",
             "headline": "Cómo organizar la despensa de casa paso a paso",
             "inLanguage": "es-ES",
@@ -63,7 +71,7 @@
         <img src="../logo.svg" alt="" width="36" height="36" />
         <span class="wordmark"><span class="light">Tu</span>Despensa</span>
       </a>
-      <p class="crumbs muted"><a href="../">Inicio</a> › <a href="../#guias">Guías</a></p>
+      <nav class="crumbs muted" aria-label="Breadcrumb"><a href="../">Inicio</a> › <a href="../#guias">Guías</a></nav>
       <article>
         <h1>Cómo organizar la despensa de casa paso a paso</h1>
         <p class="muted">Actualizado el 13 de noviembre de 2026</p>
@@ -117,8 +125,8 @@
           <figure class="shot">
             <div class="phone">
               <div class="shot-screen">
-                <img class="shot-light" src="../img/guias/producto.webp" width="600" height="1333" alt="Ficha de un producto con los campos Stock en casa y Añadir a la lista cuando el stock sea igual o menor que" decoding="async" />
-                <img class="shot-dark" src="../img/guias/producto-oscuro.webp" width="600" height="1333" alt="Ficha de un producto con los campos Stock en casa y Añadir a la lista cuando el stock sea igual o menor que" decoding="async" />
+                <img loading="lazy" class="shot-light" src="../img/guias/producto.webp" width="600" height="1333" alt="Ficha de un producto con los campos Stock en casa y Añadir a la lista cuando el stock sea igual o menor que" decoding="async" />
+                <img loading="lazy" class="shot-dark" src="../img/guias/producto-oscuro.webp" width="600" height="1333" alt="Ficha de un producto con los campos Stock en casa y Añadir a la lista cuando el stock sea igual o menor que" decoding="async" />
                 <span class="ring" style="--x:3%;--y:75.6%;--w:94%;--h:21.4%"></span><span class="mark" style="--x:50%;--y:74%" aria-hidden="true">1</span>
               </div>
             </div>
@@ -135,8 +143,8 @@
           <figure class="shot">
             <div class="phone">
               <div class="shot-screen">
-                <img class="shot-light" src="../img/guias/producto.webp" width="600" height="1333" alt="Ficha de un producto con los campos Stock en casa y Añadir a la lista cuando el stock sea igual o menor que" decoding="async" />
-                <img class="shot-dark" src="../img/guias/producto-oscuro.webp" width="600" height="1333" alt="Ficha de un producto con los campos Stock en casa y Añadir a la lista cuando el stock sea igual o menor que" decoding="async" />
+                <img loading="lazy" class="shot-light" src="../img/guias/producto.webp" width="600" height="1333" alt="Ficha de un producto con los campos Stock en casa y Añadir a la lista cuando el stock sea igual o menor que" decoding="async" />
+                <img loading="lazy" class="shot-dark" src="../img/guias/producto-oscuro.webp" width="600" height="1333" alt="Ficha de un producto con los campos Stock en casa y Añadir a la lista cuando el stock sea igual o menor que" decoding="async" />
                 <span class="ring" style="--x:4%;--y:56.3%;--w:92%;--h:5.2%"></span><span class="ring" style="--x:4%;--y:65.8%;--w:92%;--h:5.2%"></span><span class="mark" style="--x:93%;--y:56.3%" aria-hidden="true">1</span><span class="mark" style="--x:93%;--y:65.8%" aria-hidden="true">2</span>
               </div>
             </div>
@@ -161,8 +169,8 @@
           <figure class="shot">
             <div class="phone">
               <div class="shot-screen">
-                <img class="shot-light" src="../img/guias/despensa.webp" width="600" height="1333" alt="Pestaña Despensa con el botón Escanear al consumir y los productos agrupados por familia" decoding="async" />
-                <img class="shot-dark" src="../img/guias/despensa-oscuro.webp" width="600" height="1333" alt="Pestaña Despensa con el botón Escanear al consumir y los productos agrupados por familia" decoding="async" />
+                <img loading="lazy" class="shot-light" src="../img/guias/despensa.webp" width="600" height="1333" alt="Pestaña Despensa con el botón Escanear al consumir y los productos agrupados por familia" decoding="async" />
+                <img loading="lazy" class="shot-dark" src="../img/guias/despensa-oscuro.webp" width="600" height="1333" alt="Pestaña Despensa con el botón Escanear al consumir y los productos agrupados por familia" decoding="async" />
                 <span class="mark" style="--x:11.7%;--y:32.8%" aria-hidden="true">1</span><span class="mark" style="--x:77.2%;--y:44.4%" aria-hidden="true">2</span>
               </div>
             </div>
@@ -209,5 +217,18 @@
         </div>
       </article>
     </main>
+    <footer class="footer">
+      <a class="brand brand-small" href="../" aria-label="TuDespensa, inicio">
+        <img src="../logo.svg" alt="" width="28" height="28" loading="lazy" />
+        <span class="wordmark"><span class="light">Tu</span>Despensa</span>
+      </a>
+      <nav aria-label="Pie de página">
+        <a href="../#guias">Guías</a>
+        <a href="../privacidad.html">Privacidad</a>
+        <a href="../aviso-legal.html">Aviso legal</a>
+        <a href="../aviso-legal.html#contacto">Contacto</a>
+      </nav>
+      <p class="muted">© 2026 TuDespensa</p>
+    </footer>
   </body>
 </html>

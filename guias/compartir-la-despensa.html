@@ -34,6 +34,14 @@
         "@context": "https://schema.org",
         "@graph": [
           {
+            "@type": "Organization",
+            "@id": "https://tudespensa.es/#organization",
+            "name": "TuDespensa",
+            "url": "https://tudespensa.es/",
+            "logo": "https://tudespensa.es/icon.png",
+            "email": "hola@tudespensa.es"
+          },
+          {
             "@type": "Article",
             "headline": "Cómo compartir la despensa con tu familia",
             "inLanguage": "es-ES",
@@ -63,7 +71,7 @@
         <img src="../logo.svg" alt="" width="36" height="36" />
         <span class="wordmark"><span class="light">Tu</span>Despensa</span>
       </a>
-      <p class="crumbs muted"><a href="../">Inicio</a> › <a href="../#guias">Guías</a></p>
+      <nav class="crumbs muted" aria-label="Breadcrumb"><a href="../">Inicio</a> › <a href="../#guias">Guías</a></nav>
       <article>
         <h1>Cómo compartir la despensa con tu familia</h1>
         <p class="muted">Actualizado el 13 de noviembre de 2026</p>
@@ -134,8 +142,8 @@
           <figure class="shot">
             <div class="phone">
               <div class="shot-screen">
-                <img class="shot-light" src="../img/guias/despensa.webp" width="600" height="1333" alt="Pestaña Despensa con el botón Escanear al consumir y los productos agrupados por familia" decoding="async" />
-                <img class="shot-dark" src="../img/guias/despensa-oscuro.webp" width="600" height="1333" alt="Pestaña Despensa con el botón Escanear al consumir y los productos agrupados por familia" decoding="async" />
+                <img loading="lazy" class="shot-light" src="../img/guias/despensa.webp" width="600" height="1333" alt="Pestaña Despensa con el botón Escanear al consumir y los productos agrupados por familia" decoding="async" />
+                <img loading="lazy" class="shot-dark" src="../img/guias/despensa-oscuro.webp" width="600" height="1333" alt="Pestaña Despensa con el botón Escanear al consumir y los productos agrupados por familia" decoding="async" />
                 <span class="ring" style="--x:4%;--y:4.4%;--w:30%;--h:2.6%"></span><span class="mark" style="--x:37%;--y:5.4%" aria-hidden="true">1</span>
               </div>
             </div>
@@ -152,8 +160,8 @@
           <figure class="shot">
             <div class="phone">
               <div class="shot-screen">
-                <img class="shot-light" src="../img/guias/ajustes.webp" width="600" height="1333" alt="Ajustes con el nombre de la casa, el código para otros móviles y el botón Compartir código" decoding="async" />
-                <img class="shot-dark" src="../img/guias/ajustes-oscuro.webp" width="600" height="1333" alt="Ajustes con el nombre de la casa, el código para otros móviles y el botón Compartir código" decoding="async" />
+                <img loading="lazy" class="shot-light" src="../img/guias/ajustes.webp" width="600" height="1333" alt="Ajustes con el nombre de la casa, el código para otros móviles y el botón Compartir código" decoding="async" />
+                <img loading="lazy" class="shot-dark" src="../img/guias/ajustes-oscuro.webp" width="600" height="1333" alt="Ajustes con el nombre de la casa, el código para otros móviles y el botón Compartir código" decoding="async" />
                 <span class="ring" style="--x:7.5%;--y:32.7%;--w:85%;--h:5.2%"></span><span class="mark" style="--x:88%;--y:35.3%" aria-hidden="true">1</span>
               </div>
             </div>
@@ -192,5 +200,18 @@
         </div>
       </article>
     </main>
+    <footer class="footer">
+      <a class="brand brand-small" href="../" aria-label="TuDespensa, inicio">
+        <img src="../logo.svg" alt="" width="28" height="28" loading="lazy" />
+        <span class="wordmark"><span class="light">Tu</span>Despensa</span>
+      </a>
+      <nav aria-label="Pie de página">
+        <a href="../#guias">Guías</a>
+        <a href="../privacidad.html">Privacidad</a>
+        <a href="../aviso-legal.html">Aviso legal</a>
+        <a href="../aviso-legal.html#contacto">Contacto</a>
+      </nav>
+      <p class="muted">© 2026 TuDespensa</p>
+    </footer>
   </body>
 </html>
