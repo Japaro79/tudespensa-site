@@ -836,10 +836,13 @@ p {
   }
 }
 
-/* Narrow phones: only the brand and the light/dark switch fit in the header. */
+/* Narrow phones: only the brand, the guides link and the light/dark switch fit in the header. */
 @media (max-width: 480px) {
   .nav-link {
     display: none;
+  }
+  .nav-link.nav-link-phone {
+    display: inline;
   }
 }
 
