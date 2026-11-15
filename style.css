@@ -494,19 +494,78 @@ p {
   display: grid;
   gap: 12px;
 }
-.beta-button {
-  display: inline-block;
+.beta-form {
+  position: relative;
   margin-top: 28px;
+}
+.beta-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+.beta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.beta-input {
+  flex: 1 1 220px;
+  min-width: 0;
+  padding: 14px 20px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  font: inherit;
+}
+.beta-input:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+.beta-button {
+  flex: 0 0 auto;
   padding: 14px 28px;
+  border: 0;
   border-radius: 999px;
   background: var(--accent);
   color: var(--on-accent);
+  font: inherit;
   font-weight: 800;
-  text-decoration: none;
+  cursor: pointer;
 }
 .beta-button:hover,
 .beta-button:focus-visible {
   filter: brightness(1.08);
+}
+.beta-button:disabled {
+  opacity: 0.6;
+  cursor: progress;
+}
+.beta-trap {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+.beta-status {
+  min-height: 1.5em;
+  margin-top: 12px;
+  font-weight: 700;
+}
+.beta-status[data-kind='ok'] {
+  color: var(--accent);
+}
+.beta-status[data-kind='error'] {
+  color: #c2410c;
+}
+:root[data-theme='dark'] .beta-status[data-kind='error'] {
+  color: #fb923c;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) .beta-status[data-kind='error'] {
+    color: #fb923c;
+  }
 }
 .beta-note {
   margin-top: 16px;

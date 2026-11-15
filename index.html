@@ -486,30 +486,47 @@
           </p>
           <ol class="beta-steps">
             <li>
-              <strong>Únete al grupo de la beta</strong> con tu cuenta de Google (Gmail): la misma
-              que usas en Google Play en tu móvil Android.
+              <strong>Déjanos tu Gmail:</strong> el de la cuenta de Google que usas en Google Play
+              en tu móvil Android.
             </li>
             <li>
               <strong>Te escribimos al abrir la beta</strong> con el enlace para apuntarte en Google
               Play.
             </li>
             <li>
-              <strong>Instala TuDespensa desde Google Play</strong> y úsala al menos 14 días sin
-              salir del grupo. Cuéntanos qué falla en
+              <strong>Instala TuDespensa desde Google Play</strong> y úsala al menos 14 días.
+              Cuéntanos qué falla en
               <a href="mailto:hola@tudespensa.es?subject=Beta%20de%20TuDespensa">hola@tudespensa.es</a>.
             </li>
           </ol>
-          <a class="beta-button" href="https://groups.google.com/g/tudespensa-beta" rel="noopener">
-            Unirme a la beta
-          </a>
+          <form class="beta-form" id="beta-form" novalidate>
+            <label class="beta-label" for="beta-email">Tu Gmail</label>
+            <div class="beta-row">
+              <input
+                class="beta-input"
+                id="beta-email"
+                name="email"
+                type="email"
+                inputmode="email"
+                autocomplete="email"
+                placeholder="nombre@gmail.com"
+                required
+              />
+              <button class="beta-button" type="submit">Apuntarme</button>
+            </div>
+            <!-- Left empty by people; bots that fill every field are ignored. -->
+            <input class="beta-trap" name="website" type="text" tabindex="-1" autocomplete="off" aria-hidden="true" />
+            <p class="beta-status" id="beta-status" role="status" aria-live="polite"></p>
+          </form>
           <p class="beta-note">
             <strong>No se borra nada:</strong> tu casa, tu despensa y tus listas se guardan en tu
             cuenta. Cuando TuDespensa salga en Google Play te llegará como una actualización y lo
             seguirás teniendo todo. Los tickets de Pro que uses en la beta cuentan como usados.
           </p>
           <p class="beta-note">
-            Solo Android por ahora. Tu correo queda en el grupo de Google, no en TuDespensa, y puedes
-            salir cuando quieras.
+            Solo Android por ahora. Usamos tu correo solo para la beta y lo borramos cuando acabe, o
+            antes si nos lo pides en hola@tudespensa.es.
+            <a href="privacidad.html#beta">Privacidad</a>.
           </p>
         </div>
       </section>
@@ -687,6 +704,63 @@
         );
         matchMedia('(prefers-color-scheme: dark)').addEventListener('change', sync);
         sync();
+      })();
+    </script>
+    <script>
+      // Android beta sign-up: stores the Gmail address through the join_beta database function.
+      // The publishable key is public by design (the app ships it too); the function only accepts
+      // Gmail addresses and nobody can read the list through the API.
+      (() => {
+        const form = document.getElementById('beta-form');
+        if (!form) return;
+        const input = form.elements.email;
+        const status = document.getElementById('beta-status');
+        const button = form.querySelector('button');
+        const gmail = /^[a-z0-9]+(\.[a-z0-9]+)*(\+[a-z0-9._-]+)?@(gmail|googlemail)\.com$/;
+        const show = (text, kind) => {
+          status.textContent = text;
+          status.dataset.kind = kind;
+        };
+        form.addEventListener('submit', async (event) => {
+          event.preventDefault();
+          if (form.elements.website.value) return;
+          const email = input.value.trim().toLowerCase();
+          if (!gmail.test(email)) {
+            show('Escribe una dirección de Gmail (termina en @gmail.com).', 'error');
+            input.focus();
+            return;
+          }
+          button.disabled = true;
+          show('Enviando…', 'info');
+          try {
+            const res = await fetch('https://cadbdeznbzfvevyyatth.supabase.co/rest/v1/rpc/join_beta', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+                apikey: 'sb_publishable_wEY193BDJuXMzSMkqlM8IA__k2l-jOw',
+              },
+              body: JSON.stringify({ p_email: email }),
+            });
+            if (res.ok) {
+              form.reset();
+              show('¡Apuntado! Te escribiremos a ' + email + ' cuando abra la beta.', 'ok');
+            } else {
+              const body = await res.json().catch(() => ({}));
+              show(
+                body.hint === 'beta_full'
+                  ? 'La beta está completa. ¡Gracias por el interés!'
+                  : body.hint === 'invalid_email'
+                    ? 'Escribe una dirección de Gmail (termina en @gmail.com).'
+                    : 'No se ha podido apuntar. Prueba otra vez en un rato.',
+                'error',
+              );
+            }
+          } catch {
+            show('No hay conexión. Prueba otra vez en un rato.', 'error');
+          } finally {
+            button.disabled = false;
+          }
+        });
       })();
     </script>
     <script>
