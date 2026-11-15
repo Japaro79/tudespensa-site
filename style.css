@@ -736,9 +736,67 @@ p {
 }
 
 /* Header links */
-.nav-links {
+.nav-links,
+.nav-menu {
   display: flex;
+  align-items: center;
   gap: 24px;
+}
+.nav {
+  position: relative;
+}
+
+/* Hamburger button: only on phones and small tablets, where the links move into a drop-down. */
+.menu-toggle {
+  display: none;
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  border: 0;
+  border-radius: 12px;
+  background: rgb(255 255 255 / 0.16);
+  color: var(--on-header);
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+.menu-toggle:focus-visible {
+  outline: 2px solid var(--highlight);
+  outline-offset: 2px;
+}
+.menu-toggle span,
+.menu-toggle span::before,
+.menu-toggle span::after {
+  display: block;
+  width: 20px;
+  height: 2px;
+  border-radius: 2px;
+  background: currentColor;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+.menu-toggle span {
+  position: relative;
+}
+.menu-toggle span::before,
+.menu-toggle span::after {
+  content: '';
+  position: absolute;
+  left: 0;
+}
+.menu-toggle span::before {
+  top: -6px;
+}
+.menu-toggle span::after {
+  top: 6px;
+}
+.menu-toggle[aria-expanded='true'] span {
+  background: transparent;
+}
+.menu-toggle[aria-expanded='true'] span::before {
+  transform: translateY(6px) rotate(45deg);
+}
+.menu-toggle[aria-expanded='true'] span::after {
+  transform: translateY(-6px) rotate(-45deg);
 }
 
 /* FAQ */
@@ -854,10 +912,40 @@ p {
     grid-template-columns: 1fr;
   }
   .nav-links {
-    gap: 16px;
+    gap: 10px;
   }
-  .nav-link-wide {
+  .menu-toggle {
+    display: inline-flex;
+    order: 2;
+  }
+  .nav-menu {
     display: none;
+    position: absolute;
+    top: calc(100% - 4px);
+    left: 16px;
+    right: 16px;
+    z-index: 20;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 2px;
+    padding: 8px;
+    border-radius: 18px;
+    background: var(--header);
+    box-shadow: 0 16px 40px rgb(0 0 0 / 0.25);
+  }
+  .nav-menu.open {
+    display: flex;
+  }
+  .hero-band .nav-menu .nav-link {
+    display: block;
+    padding: 12px 14px;
+    border-radius: 12px;
+    opacity: 1;
+    font-size: 1.05rem;
+  }
+  .hero-band .nav-menu .nav-link:hover,
+  .hero-band .nav-menu .nav-link:focus-visible {
+    background: rgb(255 255 255 / 0.14);
   }
   .theme-label {
     display: none;
@@ -969,15 +1057,6 @@ p {
   }
 }
 
-/* Narrow phones: only the brand, the guides link and the light/dark switch fit in the header. */
-@media (max-width: 480px) {
-  .nav-link {
-    display: none;
-  }
-  .nav-link.nav-link-phone {
-    display: inline;
-  }
-}
 
 /* Hero link to the Pro section */
 .hero-pro {

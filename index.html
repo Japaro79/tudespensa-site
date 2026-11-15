@@ -179,12 +179,17 @@
         <span class="wordmark"><span class="light">Tu</span>Despensa</span>
       </a>
       <nav class="nav-links" aria-label="Principal">
-        <a class="nav-link nav-link-wide" href="#caracteristicas">Características</a>
-        <a class="nav-link" href="#pro">Pro</a>
-        <a class="nav-link" href="#precios">Precios</a>
-        <a class="nav-link" href="#preguntas">Preguntas</a>
-        <a class="nav-link nav-link-phone" href="#guias">Guías</a>
-        <a class="nav-link nav-link-wide" href="privacidad.html">Privacidad</a>
+        <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Abrir menú">
+          <span aria-hidden="true"></span>
+        </button>
+        <div class="nav-menu" id="nav-menu">
+          <a class="nav-link" href="#caracteristicas">Características</a>
+          <a class="nav-link" href="#pro">Pro</a>
+          <a class="nav-link" href="#precios">Precios</a>
+          <a class="nav-link" href="#preguntas">Preguntas</a>
+          <a class="nav-link" href="#guias">Guías</a>
+          <a class="nav-link" href="privacidad.html">Privacidad</a>
+        </div>
         <div class="theme-switch" role="group" aria-label="Ver la app en modo claro u oscuro">
           <button type="button" data-set-theme="light" aria-pressed="false">
             <span aria-hidden="true">☀️</span><span class="theme-label">Claro</span>
@@ -704,6 +709,32 @@
         );
         matchMedia('(prefers-color-scheme: dark)').addEventListener('change', sync);
         sync();
+      })();
+    </script>
+    <script>
+      // Phone header: the hamburger button opens and closes the menu with the section links.
+      (() => {
+        const toggle = document.querySelector('.menu-toggle');
+        const menu = document.getElementById('nav-menu');
+        if (!toggle || !menu) return;
+        const setOpen = (open) => {
+          toggle.setAttribute('aria-expanded', String(open));
+          toggle.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
+          menu.classList.toggle('open', open);
+        };
+        toggle.addEventListener('click', () => setOpen(toggle.getAttribute('aria-expanded') !== 'true'));
+        menu.addEventListener('click', (e) => {
+          if (e.target.closest('a')) setOpen(false);
+        });
+        document.addEventListener('click', (e) => {
+          if (!e.target.closest('.nav-links')) setOpen(false);
+        });
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape' && menu.classList.contains('open')) {
+            setOpen(false);
+            toggle.focus();
+          }
+        });
       })();
     </script>
     <script>
