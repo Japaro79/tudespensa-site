@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sobre nosotros · TuDespensa</title>
+    <meta
+      name="description"
+      content="Quién hace TuDespensa, la app de despensa y lista de la compra compartida, por qué existe y cómo se mantiene sin anuncios."
+    />
+    <link rel="canonical" href="https://tudespensa.es/sobre-nosotros.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:site_name" content="TuDespensa" />
+    <meta property="og:url" content="https://tudespensa.es/sobre-nosotros.html" />
+    <meta property="og:title" content="Sobre nosotros · TuDespensa" />
+    <meta property="og:description" content="Quién hace TuDespensa, la app de despensa y lista de la compra compartida, por qué existe y cómo se mantiene sin anuncios." />
+    <meta property="og:image" content="https://tudespensa.es/og-image.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Sobre nosotros · TuDespensa" />
+    <meta name="twitter:description" content="Quién hace TuDespensa, la app de despensa y lista de la compra compartida, por qué existe y cómo se mantiene sin anuncios." />
+    <meta name="twitter:image" content="https://tudespensa.es/og-image.png" />
+    <link rel="icon" href="logo.svg" type="image/svg+xml" />
+    <link rel="icon" href="favicon.png" sizes="48x48" />
+    <link rel="stylesheet" href="style.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://tudespensa.es/#organization",
+            "name": "TuDespensa",
+            "url": "https://tudespensa.es/",
+            "logo": "https://tudespensa.es/icon.png",
+            "email": "hola@tudespensa.es"
+          },
+          {
+            "@type": "AboutPage",
+            "@id": "https://tudespensa.es/sobre-nosotros.html#webpage",
+            "url": "https://tudespensa.es/sobre-nosotros.html",
+            "name": "Sobre nosotros · TuDespensa",
+            "inLanguage": "es-ES",
+            "about": { "@id": "https://tudespensa.es/#organization" },
+            "isPartOf": { "@id": "https://tudespensa.es/#website" }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://tudespensa.es/" },
+              { "@type": "ListItem", "position": 2, "name": "Sobre nosotros", "item": "https://tudespensa.es/sobre-nosotros.html" }
+            ]
+          }
+        ]
+      }
+    </script>
+    <script>
+      // Uses the light/dark mode picked on the home page; otherwise follows the system.
+      try {
+        const saved = localStorage.getItem('theme');
+        if (saved === 'light' || saved === 'dark') document.documentElement.dataset.theme = saved;
+      } catch {}
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+    <main id="contenido" class="legal">
+      <a class="brand" href="./" aria-label="TuDespensa, inicio">
+        <img src="logo.svg" alt="" width="36" height="36" />
+        <span class="wordmark"><span class="light">Tu</span>Despensa</span>
+      </a>
+      <nav class="crumbs muted" aria-label="Breadcrumb"><a href="./">Inicio</a> › Sobre nosotros</nav>
+      <h1>Sobre nosotros</h1>
+
+      <p>
+        TuDespensa es una app para llevar la despensa y la lista de la compra de una casa,
+        compartidas entre los móviles de quienes viven en ella. La hace un desarrollador
+        independiente.
+      </p>
+
+      <h2>Por qué existe</h2>
+      <p>
+        En casi todas las casas pasa lo mismo: alguien gasta lo último de algo y nadie lo apunta,
+        o se compra dos veces lo que ya había. Las listas en papel o en un chat se pierden y no
+        saben qué queda en la despensa. TuDespensa junta las dos cosas: apuntas al gastar,
+        escaneando el código de barras, y la lista de la compra se completa sola para toda la casa.
+      </p>
+
+      <h2>Cómo la hacemos</h2>
+      <ul>
+        <li>
+          <strong>Gratis y sin anuncios.</strong> La despensa y la lista compartida no cuestan
+          nada. TuDespensa Pro (2,99 € al mes por casa) añade leer los tickets de la compra con IA,
+          y es lo que paga el desarrollo.
+        </li>
+        <li>
+          <strong>Solo los datos necesarios.</strong> Se guardan en servidores europeos y del Reino
+          Unido. Lo explicamos todo en la <a href="privacidad.html">política de privacidad</a>.
+        </li>
+        <li>
+          <strong>Pensada para la compra en España.</strong> La lista se ordena por supermercado y
+          avisa de los alérgenos de cada producto.
+        </li>
+        <li>
+          <strong>Primero Android, después iPhone.</strong> Llega antes a Android y, más adelante,
+          a iPhone.
+        </li>
+      </ul>
+
+      <h2>Hablemos</h2>
+      <p>
+        Leemos todos los correos. Si algo falla, echas algo en falta o quieres probar la beta,
+        escribe a <a href="mailto:hola@tudespensa.es">hola@tudespensa.es</a>. Los datos del
+        titular están en el <a href="aviso-legal.html">aviso legal</a>.
+      </p>
+    </main>
+    <footer class="footer">
+      <a class="brand brand-small" href="./" aria-label="TuDespensa, inicio">
+        <img src="logo.svg" alt="" width="28" height="28" loading="lazy" />
+        <span class="wordmark"><span class="light">Tu</span>Despensa</span>
+      </a>
+      <nav aria-label="Pie de página">
+        <a href="./#guias">Guías</a>
+        <a href="privacidad.html">Privacidad</a>
+        <a href="aviso-legal.html">Aviso legal</a>
+        <a href="aviso-legal.html#contacto">Contacto</a>
+      </nav>
+      <p class="muted">© 2026 TuDespensa</p>
+    </footer>
+  </body>
+</html>
