@@ -19,6 +19,11 @@ Llega primero a Android y, más adelante, a iPhone. Contacto: support@tudespensa
 - [Cómo escanear productos para que la despensa baje sola](https://tudespensa.es/guias/escanear-productos.html): tutorial con capturas del escaneo al gastar y del stock mínimo
 - [Cómo compartir la despensa con tu familia](https://tudespensa.es/guias/compartir-la-despensa.html): tutorial para invitar a otros móviles con el código de la casa
 - [Cómo hacer la compra por supermercado](https://tudespensa.es/guias/comprar-por-supermercado.html): tutorial de la lista separada por súper, el carro y terminar la compra
+- [Cómo poner una foto a un producto](https://tudespensa.es/guias/foto-de-un-producto.html): hacer la foto o elegirla de la galería desde la ficha del producto
+- [Cómo poner el código de barras a un producto](https://tudespensa.es/guias/codigo-de-barras.html): productos añadidos a mano o desde un ticket, y los pendientes escaneados en el súper
+- [Cómo juntar dos productos repetidos en uno](https://tudespensa.es/guias/juntar-productos.html): se suman el stock, los códigos de barras, el historial y los supermercados
+- [Cuándo se añade un producto a la lista de la compra](https://tudespensa.es/guias/cuando-se-anade-a-la-lista.html): stock igual o menor que el mínimo, unidades a comprar, añadir a mano y compras esporádicas
+- [Qué es el stock mínimo y cómo ajustarlo](https://tudespensa.es/guias/stock-minimo.html): cómo elegirlo, dónde se cambia y el mínimo sugerido según lo que se gasta
 - [Cómo reponer la despensa con una foto del ticket](https://tudespensa.es/guias/reponer-con-el-ticket.html): tutorial de TuDespensa Pro, del ticket a la despensa repuesta
 - [Cómo revisar el ticket antes de reponer la despensa](https://tudespensa.es/guias/revisar-el-ticket.html): tutorial de TuDespensa Pro, dudas, productos nuevos y unidades antes de confirmar
 - [Cómo hacer una foto del ticket que la IA lea a la primera](https://tudespensa.es/guias/foto-del-ticket.html): ticket entero, plano y con luz, el PDF del ticket digital y qué hacer si no se lee
